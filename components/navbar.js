@@ -46,7 +46,7 @@ function navbar() {
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="./cart.html">
                 <i class="material-icons">shopping_bag</i>
               </a>
             </li>
@@ -55,9 +55,9 @@ function navbar() {
                 <i class="material-icons">account_circle</i>
               </a>
               <ul id="nav-account">
-                <li><a href="signin.html">SIGN IN</a></li>
+                <li><a href="./signin.html">SIGN IN</a></li>
                 <hr />
-                <li><a href="signup.html">SIGN UP</a></li>
+                <li><a href="./signup.html">SIGN UP</a></li>
               </ul>
             </li>
           </ul>
@@ -70,7 +70,7 @@ function navbar() {
         <div id="menubar-women"><p>WOMEN</p></div>
         <div id="menubar-kids"><p>KIDS</p></div>
         <div id="menubar-beauty"><p>BEAUTY</p></div>
-        <div id="menubar-men"><p>MEN</p></div>
+        <div id="menubar-men"><p><a href="./mens.html">MEN</a></p></div>
         <div id="menubar-homestop"><p>HOMESTOP</p></div>
         <div id="menubar-watches"><p>WATCHES</p></div>
         <div id="menubar-brands"><p>BRANDS</p></div>
