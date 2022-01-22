@@ -6,7 +6,6 @@
   grid-gap: 2%;
 }
 .product-box {
-  /* border: 1px solid black; */
   font-family: sans-serif;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -27,7 +26,8 @@ img {
 
 .price-box {
   display: flex;
-  margin-left: 5%;
+  margin-left: 3%;
+  margin-top: 3%;
 }
 
 .price-box > p {
@@ -65,7 +65,7 @@ img {
 }
 
 .brand-box {
-  line-height: 1;
+  line-height: 1.5;
   padding: 0 3% 0 3%;
 }
 
@@ -104,6 +104,7 @@ select {
 .shites-men-main {
   width: 100%;
   display: flex;
+  margin-top: 10%;
 }
 .filter-box {
   width: 30%;
@@ -125,4 +126,17 @@ select {
   margin-bottom: 15px;
   width: 20%;
   border: 1px solid black;
+}
+.cart-btn {
+  background-color: black;
+  color: aliceblue;
+  border: 1px solid transparent;
+  padding: 2%;
+  bottom: 0;
+  margin-top: 5%;
+  cursor: pointer;
+  margin-bottom: 10%;
+}
+.footer {
+  margin-top: 15%;
 }

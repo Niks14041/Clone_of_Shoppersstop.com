@@ -3,6 +3,8 @@
 
 let arr = [];
 
+let mycartArr = [];
+
 function CreatePro(imgUrl,brandName,des,priceOfpro,discountOfpro,prepriceOfpro){
 
     this.img = imgUrl;
@@ -12,6 +14,7 @@ function CreatePro(imgUrl,brandName,des,priceOfpro,discountOfpro,prepriceOfpro){
     this.discount  = discountOfpro;
     this.preprice = prepriceOfpro;
 }
+
 
 let product1 = new CreatePro('https://sslimages.shoppersstop.com/sys-master/images/h85/h74/17325042040862/A21FQLMOPG24867_RED.jpg_230Wx334H','ALLEN SOLLY','Stripes Cotton Linen Blend Regular Fit Mens Casual Shirt',999,58,'₹ 2399');
 
@@ -25,7 +28,7 @@ let product3 = new CreatePro('https://sslimages.shoppersstop.com/sys-master/imag
 
 arr.push(product3);
 
-let product4 = new CreatePro('https://sslimages.shoppersstop.com/sys-master/images/h1a/h25/16162195046430/S21509MANDCORLB_LIGHT_BLUE.jpg_230Wx334H','LIFE','Solid Cotton Slim Fit Mens Shirt',649,50,'₹ 1299');
+let product4 = new CreatePro('https://sslimages.shoppersstop.com/sys-master/images/h1a/h25/16162195046430/S21509MANDCORLB_LIGHT_BLUE.jpg_230Wx334H','LIFE','Solid Cotton Slim Fit Mens Casual Shirt',649,50,'₹ 1299');
 
 arr.push(product4);
 
@@ -113,13 +116,24 @@ data.map(function (elem) {
     var price_div = document.createElement("div");
     price_div.setAttribute("class", "price-box");
 
+    let addTocart = document.createElement('button');
+    addTocart.textContent = 'ADD TO CART';
+    addTocart.setAttribute('class','cart-btn');
+
+
+    addTocart.addEventListener('click', () => {
+
+        myCart(elem);
+
+    });
+
     price_div.append(price, previous_price, discount);
 
     image_div.append(image);
 
     brand_div.append(brand, des)
 
-    child_div.append(image_div, brand_div, price_div);
+    child_div.append(image_div, brand_div, price_div,addTocart);
 
     div.append(child_div);
 
@@ -201,6 +215,23 @@ function numsort(){
     }
      
 }
+
+// -----------------------------------------cart------------------------
+function myCart(ele){
+
+    mycartArr.push(ele);
+
+    localStorage.setItem('myCart',JSON.stringify(mycartArr));
+    // window.location.href = './cart.html'
+    
+}
+
+let cart_btn = document.getElementById('cart-btn');
+cart_btn.addEventListener('click',()=>{
+
+    window.location.href = './cart.html'
+
+})
 
 
 
