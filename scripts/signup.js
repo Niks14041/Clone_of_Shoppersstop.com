@@ -49,7 +49,7 @@ document.getElementById("btn").addEventListener("click", signUp);
     message.innerText = data.message;
 
     setTimeout(function(){
-      window.location.href = "../signin.html"
+      window.location.href = ".././signin.html"
     }, 1000);
   }
   
