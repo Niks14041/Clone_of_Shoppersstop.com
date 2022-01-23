@@ -123,6 +123,8 @@ data.map(function (elem) {
 
     addTocart.addEventListener('click', () => {
 
+        alert('Item successfully added to cart');
+
         myCart(elem);
 
     });
