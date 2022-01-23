@@ -218,5 +218,5 @@ function deleteItem(index){
 
 let checkout_btn = document.getElementById('check-btn');
 checkout_btn.addEventListener('click',()=>{
-    window.location.href = './checkout.html'
+    window.location.href = './payment.html'
 })
